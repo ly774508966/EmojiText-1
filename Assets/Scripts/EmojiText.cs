@@ -404,6 +404,10 @@ public class EmojiText : Text, IPointerClickHandler
     int _AnimationIndex = 0;
     private void DrawSpriteAnimation()
     {
+        if(null == m_EmojiAsset)
+        {
+            return;
+        }
         _animationTime += Time.deltaTime * m_EmojiSpeed;
         if (_animationTime >= 1.0f)
         {
